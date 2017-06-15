@@ -3,6 +3,6 @@ MAINTAINER Reiji Sakao <reiji.sakao@gmail.com>
 
 RUN apt update && apt upgrade -y
 RUN apt install -y vim rlwrap language-pack-ja-base language-pack-ja
-RUN alias ocaml='rlwrap ocaml' && alias ocamlja='LANG=ja_JP.utf8 rlwrap ocaml'
+RUN echo "alia ocaml='rlwrap ocaml'" >> ~/.bashrc && echo "alias ocamlja='LANG=ja_JP.utf8 rlwrap ocaml'" >> ~/.bashrc
 
 CMD ["bash"]
